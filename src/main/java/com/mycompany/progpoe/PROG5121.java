@@ -23,6 +23,20 @@ public class PROG5121 {// start of the class
         obj.loginUser();
         
     }//end of the main method
+
+    private static class Registeration {
+
+        public Registeration() {
+        }
+
+        private void registerUser() {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+
+        private void loginUser() {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+    }
 }// end of the class
     
 

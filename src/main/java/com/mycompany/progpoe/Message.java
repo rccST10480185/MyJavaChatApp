@@ -1,27 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.progpoe;
 
 import javax.swing.JOptionPane;
 import java.util.Random;
-        
 
-/**
- *
- * @author RC_Student_Lab
- */
 public class Message {
-    // unique 10-digit message ID
     private String messageid;
-    // Number assigned to the message
     private int messageNumber;
-    // Recipients phone number
     private String recipient;
-    
     private String messageContent;
-    
     private String messageHash;
     
     public Message(int messageNumber, String recipient, String messageContent) {
@@ -36,7 +22,7 @@ public class Message {
         Random rand = new Random();
         StringBuilder id = new StringBuilder();
         for (int i = 0; i < 10; i++) {
-            id.append(rand.nextInt(10)); // Append random digit (0-9)
+            id.append(rand.nextInt(10));
         }
         return id.toString();
     }
@@ -47,7 +33,7 @@ public class Message {
     
     public boolean checkRecipientCell() {
         if (this.recipient == null) return false;
-        this.recipient = this.recipient.trim();  // white space
+        this.recipient = this.recipient.trim();
         return this.recipient.matches("^\\+27\\d{9}$");
     }
     
@@ -78,7 +64,7 @@ public class Message {
         if (choice >= 0 && choice < options.length) {
             return options[choice];
         } else {
-            return "Discard Message"; // Default action if user closes dialog
+            return "Discard Message";
         }
     }
    
